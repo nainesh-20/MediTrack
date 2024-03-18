@@ -1,0 +1,64 @@
+
+First signin/signup pages
+
+1 databases
+Singup -  we need 9 column data
+First name
+Last name
+Hospital name
+Address 1 ( hospital )
+Address 2 (hospital)
+City
+Country
+Pin code
+Email
+Phone number
+Password
+
+
+Sign in
+Validation from the signup 
+Need email
+Password
+-  Contact us
+	- name
+	- email
+	- phone
+	- hospital name
+	- text 
+
+
+Then main landing page
+
+Thinning of some parallax effect website / glass morphism UI  – cause found a tutorial for that
+One page is for the form where we enter details 
+Option  – to upload the excel sheet of data so the database gets updated.
+One page is to view the database – (this will have the update and delete option)
+Then we have a visualization page
+Then we have the model result page
+
+
+Since we are planning for the ml model the database needs to have a timestamp column so we can use some forecasting model (model main idea —-> it has to tell us when does an equipment likely to go out of stock provided it has some historical data) 
+
+
+
+
+
+
+
+
+
+Database for the inventory: (for example — need to work on this —> need a 12 column data for this database) 
+
+Item name
+Item manufacturer
+Vendor (If it was outsourced or 3rd party) 
+Item quantity
+Item unit price
+Item discount price
+Item use
+Item substitution if any (optional)
+Item delivery time
+Item purchase date
+Item completion date
+
