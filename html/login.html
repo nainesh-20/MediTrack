@@ -12,57 +12,57 @@
         <div class="form signup">
             <h2>Sign UP </h2> 
             <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="firstname" required="required">
                 <i class="fa-solid fa-user"></i>
                 <span> First Name</span>
             </div>
             <div class="inputBox">
-                    <input type="text" name="" required="required">
+                    <input type="text" name="lastname" required="required">
                     <i class="fa-solid fa-user"></i>
                     <span>Last Name </span>
             </div> 
             <div class="inputBox">
-                        <input type="text" name="" required="required">
+                        <input type="text" name=hospitalname" required="required">
                         <i class="fa-solid fa-hospital"></i>
                         <span> Hospital Name</span>
             </div>
             <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="addressone" required="required">
                 <i class="fa-solid fa-map-marker"></i>
                 <span> Address 1</span>
             </div>
             <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="addresstwo" required="required">
                 <i class="fa-solid fa-map-marker"></i>
                 <span> Address 2</span>
             </div>
             <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="city" required="required">
                 <i class="fa-solid fa-city"></i>
                 <span> City</span>
             </div>
             <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="country" required="required">
                 <i class="fa-solid fa-flag"></i>
                 <span>Country </span>
             </div>
             <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="pincode" required="required">
                 <i class="fa-solid fa-map-pin"></i>
                 <span>Pin code</span>
             </div>
             <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="phonenumber" required="required">
                 <i class="fa-solid fa-phone"></i>
                 <span>Phone Number</span>
             </div>
             <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="email" required="required">
                 <i class="fa-solid fa-envelope"></i>
                 <span>Email</span>
             </div>
             <div class="inputBox">
-                <input type="password" name="" required="required">
+                <input type="password" name="password" required="required">
                 <i class="fa-solid fa-lock"></i>
                 <span>Password</span>
             </div>                              
@@ -108,3 +108,34 @@
     </script>
 </body>
 </html>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from being submitted in the traditional way
+
+    // Get form data
+    const formData = new FormData(event.target);
+
+    // Convert form data to JSON
+    const data = {};
+    for (let [key, value] of formData.entries()) {
+        data[key] = value;
+    }
+
+    // Send a POST request to your backend
+    fetch('http://localhost:5004/user/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+});
+</script>
