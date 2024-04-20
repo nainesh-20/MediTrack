@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Meditrack
 
 ## PROJECT REPORT
@@ -71,6 +70,3 @@ incorporating the ID, type, status, and purchase date.
 documentation, and synthesized datasets.
 - we will use Google Docs linked to our project page for collaborative documentation and
 progress tracking.[Link]
-=======
-# MediTrack
->>>>>>> ef6331ac (changes)
