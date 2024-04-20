@@ -55,7 +55,7 @@ function SideMenu() {
         <div className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50">
         <img
                               className="h-8 w-8 rounded-full"
-                              src={require('/Users/jarvis/Library/CloudStorage/OneDrive-IndianaUniversity/sem2/ADT/finalproject/react/Frontend/src/assets/AdobeStock_620901550.jpeg')}
+                              src={require('../assets/AdobeStock_620901550.jpeg')}
                               alt="profile"
                             />
 
