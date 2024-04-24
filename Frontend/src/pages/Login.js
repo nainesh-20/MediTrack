@@ -46,7 +46,7 @@ function Login() {
       // });
 
       //axios login request
-      axios.post("http://localhost:4012/api/login", form).then((result) => {
+      axios.post("http://3.15.140.250:4012/api/login", form).then((result) => {
         //set user in local storage
         console.log("User data", "1234", result.data);
         localStorage.setItem("user", JSON.stringify(result.data));
