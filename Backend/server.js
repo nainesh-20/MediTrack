@@ -3,7 +3,7 @@ const { main } = require("./models/index");
 const productRoute = require("./router/product");
 const cors = require("cors");
 const User = require("./models/users");
-const Product = require("./models/Product");
+const Product = require("./models/product");
 const medicalSuppliesRouter = require('./router/supplies');
 
 const app = express();
