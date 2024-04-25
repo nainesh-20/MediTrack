@@ -45,7 +45,7 @@ export default function AddProduct({
 
 
   const addProduct = () => {
-    fetch("http://localhost:4012/api/product/add", {
+    fetch("https://meditrack-4w9w.onrender.com/api/product/add", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
