@@ -53,7 +53,7 @@ export default function UpdateProduct({ updateProductData, updateModalSetting })
   const updateProduct = async () => {
     try {
       console.log(product);
-      const response = await fetch(`http://localhost:4012/api/product/:${product.productId}`, {
+      const response = await fetch(`https://meditrack-4w9w.onrender.com/api/product/:${product.productId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
