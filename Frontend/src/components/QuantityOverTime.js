@@ -22,7 +22,7 @@ function QuantityOverTime() {
     })
     const s = ()=>{
         // Fetch data from the API
-        fetch(`http://localhost:4012/api/supplies/quantity-over-time?supplyName=${supplyName}`)
+        fetch(`https://meditrack-4w9w.onrender.com/api/supplies/quantity-over-time?supplyName=${supplyName}`)
             .then(response => {
                 if (!response.ok) {
                     // console.log("error",response)
