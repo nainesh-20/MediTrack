@@ -11,7 +11,7 @@ const TotalQuantityBySupplyType = () => {
     // Fetch data from the API on component mount
     useEffect(() => {
         // console.log("c")
-        fetch('http://localhost:4012/api/supplies/total-quantity-by-supply-type')
+        fetch('https://meditrack-4w9w.onrender.com/api/supplies/total-quantity-by-supply-type')
             .then(response => {
                 if (!response.ok) {
                     // console.log("error",response)
