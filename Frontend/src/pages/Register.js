@@ -27,7 +27,7 @@ function Register() {
 
   // Register User
   const registerUser = () => {
-    fetch("http://localhost:4012/api/register", {
+    fetch("https://meditrack-4w9w.onrender.com/api/register", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
