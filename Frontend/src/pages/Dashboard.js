@@ -18,7 +18,7 @@ function Dashboard() {
 
 // Fetching total sale amount
 const fetchTotalSaleAmount = () => {
-  fetch(`http://localhost:4012/api/product/get`)
+  fetch(`https://meditrack-4w9w.onrender.com/api/product/get`)
     .then((response) => response.json())
     .then((salesData) => {
       const totalSaleAmount = salesData.reduce((total, sale) => total + Number(sale.Unit_Price), 0);
@@ -36,7 +36,7 @@ const fetchBudgetAmount = () => {
 
 // Fetching all stores data
 const fetchStoresData = () => {
-  fetch(`http://localhost:4012/api/product/get`)
+  fetch(`https://meditrack-4w9w.onrender.com/api/product/get`)
     .then((response) => response.json())
     .then((products) => {
       const uniqueBusinessNames = [...new Set(products.map(product => product.businessname))];
@@ -48,7 +48,7 @@ const fetchStoresData = () => {
 
   // Fetching Data of All Products
   const fetchProductsData = () => {
-    fetch(`http://localhost:4012/api/product/get`)
+    fetch(`https://meditrack-4w9w.onrender.com/api/product/get`)
       .then((response) => response.json())
       .then((datas) => setProducts(datas))
       .catch((err) => console.log(err));
