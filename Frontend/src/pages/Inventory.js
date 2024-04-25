@@ -26,7 +26,7 @@ function Inventory() {
  // Fetching Data of All Products
   const fetchProductsData = async () => {
     try {
-      const response = await fetch(`http://localhost:4012/api/product/get`);
+      const response = await fetch(`https://meditrack-4w9w.onrender.com/api/product/get`);
       const data = await response.json();
       setAllProducts(data);
     } catch (err) {
@@ -40,7 +40,7 @@ function Inventory() {
 
   //  Fetching Data of Search Products
   const fetchSearchData = () => {
-    fetch(`http://localhost:4012/api/product/search?find=${searchTerm}`)
+    fetch(`https://meditrack-4w9w.onrender.com/api/product/search?find=${searchTerm}`)
       .then((response) => response.json())
       .then((data) => {
         setAllProducts(data);
@@ -68,7 +68,7 @@ function Inventory() {
   // Delete item
   const deleteItem = (id) => {
     console.log("Product ID: ", id);
-    console.log(`http://localhost:4012/api/product/delete/${id}`);
+    console.log(`https://meditrack-4w9w.onrender.com/api/product/delete/${id}`);
     fetch(`http://localhost:4012/api/product/delete/${id}`)
       .then((response) => response.json())
       .then((data) => {
